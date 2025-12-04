@@ -4,6 +4,8 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,6 +49,17 @@ public class Pelicula {
 	 public void addPelicula(Puntuacion punt) {
 		 puntuaciones.add(punt); //puntuaciones es del array
 		 punt.setIdpelicula(this);
+	 }
+	 
+	 public void removePelicula(Puntuacion punt) {
+	        puntuaciones.remove(punt);
+	        punt.setIdpelicula(null);
+	    }
+
+	 @Override
+	 public String toString() {
+		return "Pelicula [id=" + id + ", puntuaciones=" + puntuaciones + ", usuario=" + usuario + ", titulo=" + titulo
+				+ ", director=" + director + ", genero=" + genero + ", añoEstreno=" + añoEstreno + "]";
 	 }
 	 
 	 
