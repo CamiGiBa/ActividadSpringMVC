@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @Entity
-@Table(name = "usuarioActividad")
+@Table(name = "usuarios") //se tiene que llamar al igual que en el sqlManagement
 @EqualsAndHashCode(onlyExplicitlyIncluded =  true)	
 public class Usuario {
 	@Id
@@ -32,7 +32,7 @@ public class Usuario {
      private String nombre;
 
 	 @OneToMany(mappedBy="usuario")
-	 private List<Pelicula> peliculas;
+	 private List<Puntuacion> puntuaciones;
 
 	 @Override
 	 public String toString() {
