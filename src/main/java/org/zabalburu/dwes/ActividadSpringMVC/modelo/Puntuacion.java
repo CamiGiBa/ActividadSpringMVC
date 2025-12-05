@@ -22,7 +22,7 @@ public class Puntuacion {
 	    private Long id;
 	  
 	     @ManyToOne
-	     @JoinColumn(name = "id_usuario", nullable = false)
+	     @JoinColumn(name = "usuario_id", nullable = false)
 	     private Usuario idusuario;
 
 	     @ManyToOne
